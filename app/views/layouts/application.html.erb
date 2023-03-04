@@ -46,15 +46,15 @@
 
     <div class="navholder">
       <nav class="links">
-        <%= link_to_different_page 'Active', active_path %>
-        <%= link_to_different_page 'Recent', recent_path %>
-        <%= link_to_different_page 'Comments', comments_path %>
+        <%= link_to_different_page '热门', active_path %>
+        <%= link_to_different_page '最新', recent_path %>
+        <%= link_to_different_page '最近留言', comments_path %>
 
         <% if @user && @user.can_submit_stories? %>
-          <%= link_to_different_page 'Submit', new_story_path %>
+          <%= link_to_different_page '提交', new_story_path %>
         <% end %>
 
-        <%= link_to_different_page 'Search', search_path %>
+        <%= link_to_different_page '搜索', search_path %>
 
 
         <% if @user %>
@@ -68,7 +68,7 @@
           <%= link_to_different_page 'Saved', saved_path %>
           <%= link_to_different_page raw("#{@user.username}&nbsp;<span class='karma'>(#{@user.karma})</span>"), settings_path %>
         <% else %>
-          <%= link_to_different_page 'Login', login_path, class: 'corner' %>
+          <%= link_to_different_page  t('login') , login_path, class: 'corner' %>
         <% end %>
       </nav>
     </div>
@@ -81,7 +81,7 @@
           <%= link_to raw("&#9993;"), inbox_path, class: 'inbox' %>
         <% end %>
       <% else %>
-        <%= link_to 'Login', login_path, class: 'corner' %>
+        <%= link_to t('login'), login_path, class: 'corner' %>
       <% end %>
     </nav>
   </header>

@@ -30,6 +30,5 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  login: "Login"
-
+  hello: "你好世界"
+  login: "登录"
